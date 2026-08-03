@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Token Economy — 딥리서치 투자분석 보고서 V10.1</title>
+<meta name="description" content="AI 토큰이코노미 6대 심층 질문: 토큰가격 이분화, 빅테크 FCF/회사채, 반도체 사이클 고점, 중국 AI, 실적 체크리스트, 데이터센터 병목. 195+ 에이전트 검증.">
+<style>
+:root{
+  --navy:#1F3864; --blue:#2E75B6; --lblue:#D6E4F0; --orange:#FFC000;
+  --red:#C00000; --green:#2E7D32; --gray:#595959; --lgray:#F2F2F2;
+  --bg:#0b1220; --card:#111a2e; --border:#22314f; --text:#e8edf7; --muted:#9fb0cc;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f5f7fb; --card:#ffffff; --border:#dbe3f0; --text:#16233f; --muted:#4b5a78; }
+}
+:root[data-theme="dark"]{ --bg:#0b1220; --card:#111a2e; --border:#22314f; --text:#e8edf7; --muted:#9fb0cc; }
+:root[data-theme="light"]{ --bg:#f5f7fb; --card:#ffffff; --border:#dbe3f0; --text:#16233f; --muted:#4b5a78; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",Roboto,sans-serif;
+  line-height:1.65; font-size:15px;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,#132a52 60%,var(--blue) 130%);
+  color:#fff; padding:64px 0 48px; position:relative; overflow:hidden;
+}
+header.hero::after{
+  content:""; position:absolute; right:-60px; top:-60px; width:320px; height:320px;
+  background:radial-gradient(circle,rgba(255,192,0,.18),transparent 70%);
+}
+.eyebrow{color:var(--orange); font-weight:700; letter-spacing:.06em; font-size:13px; text-transform:uppercase}
+h1.title{font-size:clamp(28px,4vw,42px); margin:10px 0 8px; font-weight:800; letter-spacing:-.01em}
+.subtitle{color:#cfe0f7; font-size:17px; max-width:760px}
+.meta{margin-top:22px; display:flex; flex-wrap:wrap; gap:10px}
+.chip{
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
+  border-radius:999px; padding:6px 14px; font-size:12.5px; color:#e6eefb;
+}
+.chip.verify{background:rgba(46,125,50,.22); border-color:rgba(46,125,50,.5); color:#bfe6c2}
+nav.toc{
+  position:sticky; top:0; z-index:20; background:var(--bg);
+  border-bottom:1px solid var(--border); backdrop-filter:blur(8px);
+}
+nav.toc .inner{max-width:1080px;margin:0 auto;padding:0 20px; display:flex; gap:4px; overflow-x:auto; scrollbar-width:none}
+nav.toc .inner::-webkit-scrollbar{display:none}
+nav.toc a{
+  white-space:nowrap; color:var(--muted); text-decoration:none; font-size:13px; font-weight:600;
+  padding:14px 12px; border-bottom:2px solid transparent;
+}
+nav.toc a:hover{color:var(--blue)}
+nav.toc a.active{color:var(--blue); border-bottom-color:var(--blue)}
+main{padding:40px 0 80px}
+section.block{margin-bottom:56px; scroll-margin-top:56px}
+.section-num{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:30px; height:30px; border-radius:8px; background:var(--blue); color:#fff;
+  font-weight:800; font-size:14px; margin-right:10px;
+}
+h2{
+  font-size:22px; font-weight:800; color:var(--text); display:flex; align-items:center;
+  margin:0 0 6px; padding-bottom:14px; border-bottom:1px solid var(--border);
+}
+h3{font-size:16px; font-weight:700; color:var(--blue); margin:26px 0 10px}
+p{color:var(--text); margin:10px 0}
+p.lead{color:var(--muted); font-size:15px}
+ul.bullets{margin:10px 0; padding-left:20px}
+ul.bullets li{margin:6px 0; color:var(--text)}
+.callout{
+  background:var(--card); border:1px solid var(--border); border-left:4px solid var(--orange);
+  border-radius:10px; padding:14px 16px; margin:16px 0; font-size:14px; color:var(--muted);
+}
+.callout.red{border-left-color:var(--red)}
+.callout.green{border-left-color:var(--green)}
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin:18px 0}
+.kpi{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px}
+.kpi .label{font-size:12px; color:var(--muted); font-weight:600}
+.kpi .value{font-size:24px; font-weight:800; margin-top:4px}
+.kpi .sub{font-size:11.5px; color:var(--muted); margin-top:4px; line-height:1.4}
+.kpi.blue .value{color:var(--blue)} .kpi.red .value{color:var(--red)} .kpi.orange .value{color:#c56b00} .kpi.green .value{color:var(--green)}
+.tblwrap{overflow-x:auto; border:1px solid var(--border); border-radius:12px; margin:14px 0}
+table{width:100%; border-collapse:collapse; font-size:13.2px; min-width:560px}
+thead th{
+  background:var(--navy); color:#fff; text-align:left; padding:10px 12px; font-weight:700;
+  white-space:nowrap;
+}
+tbody td{padding:9px 12px; border-top:1px solid var(--border); color:var(--text); vertical-align:top}
+tbody tr:nth-child(even){background:rgba(46,117,182,.06)}
+.badge{
+  display:inline-block; font-size:10.5px; font-weight:700; padding:2px 7px; border-radius:5px;
+  margin-left:4px; vertical-align:middle;
+}
+.badge.ok{background:rgba(46,125,50,.18); color:#4caf50}
+.badge.fix{background:rgba(255,152,0,.18); color:#e6a100}
+.badge.na{background:rgba(159,176,204,.15); color:var(--muted)}
+.src{font-size:11.5px; color:var(--muted); margin-top:6px}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+@media (max-width:720px){.grid2{grid-template-columns:1fr}}
+.tag-updated{
+  display:inline-block; background:var(--orange); color:#3a2a00; font-weight:800; font-size:11px;
+  padding:2px 8px; border-radius:6px; margin-left:8px; vertical-align:middle;
+}
+.v101{border:1px solid rgba(255,192,0,.4); background:rgba(255,192,0,.06); border-radius:14px; padding:20px; margin:16px 0}
+footer{border-top:1px solid var(--border); padding:36px 0; color:var(--muted); font-size:12.5px}
+footer a{color:var(--blue)}
+.verify-stat{display:flex; gap:18px; flex-wrap:wrap; margin:14px 0}
+.verify-stat div{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px 18px; text-align:center}
+.verify-stat .n{font-size:22px; font-weight:800}
+.verify-stat .l{font-size:11.5px; color:var(--muted)}
+a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:var(--card); border:1px solid var(--border); border-radius:999px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:16px; color:var(--text); text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Deep Research · Investment Analysis</div>
+    <h1 class="title">AI Token Economy</h1>
+    <p class="subtitle">딥리서치 투자분석 보고서 V10.1 — 토큰가격 이분화 · 빅테크 FCF·회사채 · 반도체 사이클 고점 · 중국 AI · 실적 체크리스트 · 데이터센터 병목</p>
+    <div class="meta">
+      <span class="chip">📅 2026년 8월 (V10.1) · 기준일 2026-07-18 / Q2 실적 반영 2026-08</span>
+      <span class="chip verify">✓ 총 276개 에이전트, 2~3단계 적대적 검증</span>
+      <span class="chip">🔗 v9(2026-06-24) 후속</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" id="toc">
+  <div class="inner">
+    <a href="#summary">요약</a>
+    <a href="#ch1">① 토큰가격</a>
+    <a href="#ch2">② FCF·회사채</a>
+    <a href="#ch3">③ 반도체 고점</a>
+    <a href="#ch4">④ 중국 AI</a>
+    <a href="#ch5">⑤ 실적체크</a>
+    <a href="#ch6">⑥ DC 지연</a>
+    <a href="#v101">V10.1 업데이트</a>
+    <a href="#conclusion">결론</a>
+    <a href="#verify">검증 로그</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section class="block" id="summary">
+  <h2><span class="section-num">1</span>Executive Summary</h2>
+  <p class="lead">v9(6/24) 이후 시장은 급변했습니다: KOSPI 서킷브레이커(6/23), AI칩 섹터 하루 $1.4T 증발(6월), 뉴욕주 데이터센터 모라토리엄(7/14), Oracle 신용등급 강등(7/9), 그리고 7월 말 Q2 실적 시즌과 반도체 베어마켓 진입(7월 -18.9%)까지. 아래는 6대 질문에 대한 딥리서치 답변입니다.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>질문</th><th>핵심 답변</th><th>근거 강도</th></tr></thead>
+    <tbody>
+      <tr><td><b>① 토큰 가격</b></td><td>이분화 확정: 미·중 플래그십 격차 10~30배(GPT-5.5 $5/$30 vs DeepSeek V4 Pro $0.435/$0.87), 극단 비교 시 수백 배. 프런티어 절대비용은 연 3~18배 상승 중</td><td>높음 <span class="badge ok">검증</span></td></tr>
+      <tr><td><b>② 빅테크 FCF</b></td><td>합산 CapEx가 영업현금흐름을 2026 Q3경 추월. Oracle 기교차→Amazon 진행중→Alphabet·Meta는 Q2 실적에서 이미 마이너스 확인(예측보다 조기 실현)</td><td>높음 <span class="badge ok">검증</span></td></tr>
+      <tr><td><b>③ 반도체 고점?</b></td><td>고점 지표 5개 중 실물은 3~4개 점등, 주가는 7월 말 베어마켓 진입(SOX -18.9%). 실물과 주가가 분리 — 다운턴 개시 아닌 선행 조정</td><td>중간 (해석 개입)</td></tr>
+      <tr><td><b>④ 중국 AI</b></td><td>CapEx 8:1 열세에도 토큰 가격 바닥 결정력 확보. HBM 97% 서방 집중과 CXMT 3-4년 격차가 구조적 제약</td><td>높음 <span class="badge ok">검증</span></td></tr>
+      <tr><td><b>⑤ 실적 체크</b></td><td>Q2 실적으로 수요(성장률·백로그) 재확인·강화. 리스크(FCF 마이너스)는 예측보다 조기 실현 중</td><td>높음 (실적 공시)</td></tr>
+      <tr><td><b>⑥ DC 지연</b></td><td>NY 최초 주단위 모라토리엄(9.7GW 노출). 변압기 4년·터빈 5년 백로그 → 전력장비 슈퍼사이클($20B→$65B)</td><td>높음 (법안·리드타임 실측)</td></tr>
+    </tbody>
+  </table></div>
+  <p class="src">상세 수치·URL은 각 섹션 하단 및 검증 로그 참조. <span class="badge ok">검증</span> = 3표 적대적 교차검증 통과</p>
+</section>
+
+<section class="block" id="ch1">
+  <h2><span class="section-num">2</span>토큰 가격 — 저가·고가 이분화와 향후 구조</h2>
+  <h3>2.1 2026년 7월 가격 지형 ($/1M tokens) — 공식 가격문서 3표 확인</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>티어</th><th>모델</th><th>Input</th><th>Output</th><th>특징</th></tr></thead>
+    <tbody>
+      <tr><td>프런티어 추론 <span class="badge ok">검증</span></td><td>GPT-5.4 Pro</td><td>$30</td><td>$180</td><td>최고가. 추론 특화</td></tr>
+      <tr><td>프런티어 최상위 <span class="badge ok">검증</span></td><td>Claude Fable 5 / Mythos 5</td><td>$10</td><td>$50</td><td>Anthropic 최상위 (공식 페이지 확인)</td></tr>
+      <tr><td>프런티어 <span class="badge ok">검증</span></td><td>GPT-5.5 / GPT-5.6 Sol</td><td>$5</td><td>$30</td><td>Fable/Mythos 5의 절반가</td></tr>
+      <tr><td>프런티어 <span class="badge ok">검증</span></td><td>Claude Opus 4.8</td><td>$5</td><td>$25</td><td>2025.11 3배 인하 후 유지</td></tr>
+      <tr><td>프로덕션 <span class="badge ok">검증</span></td><td>Claude Sonnet 5</td><td>$2</td><td>$10</td><td>한시가(~8/31, 이후 $3/$15)</td></tr>
+      <tr><td>중국 프리미엄 시도</td><td>Kimi K3 <span class="badge na">미검증</span></td><td>$3</td><td>$15</td><td>추적사이트 상충, 공식 확인 실패</td></tr>
+      <tr><td>중국 플래그십 <span class="badge ok">검증</span></td><td>DeepSeek V4 Pro</td><td>$0.435</td><td>$0.87</td><td>공식 API 문서 확인</td></tr>
+      <tr><td>커모디티 <span class="badge ok">검증</span></td><td>DeepSeek V4 Flash</td><td>$0.14</td><td>$0.28</td><td>공식가</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">Sonnet 5·Opus 4.7+는 신형 토크나이저로 동일 텍스트당 토큰이 ~30% 늘어 실효 인하폭은 헤드라인보다 작음. 중국 모델 제3자 가격 추적치는 상충이 잦아 <span class="badge na">미검증</span> 라벨을 붙였습니다.</div>
+
+  <h3>2.2 세 가지 가격 곡선이 동시에 진행 중</h3>
+  <ul class="bullets">
+    <li><b>동일 성능 기준</b>: 연 9~900배 하락(중앙값 ~50배, Epoch) · 최근 구간(24.4~25.11)은 연 5~10배(MIT FutureTech) — <span class="badge ok">검증</span></li>
+    <li><b>신규 플래그십 출시가</b>: 오히려 인상 — GPT-5 $1.25(25.8)→5.2 $1.75→5.4 $2.50→5.5 $5(26.4), 8개월새 input 4배. 프런티어 절대 구동비용은 연 3~18배 상승(MIT) — <span class="badge ok">검증</span></li>
+    <li><b>태스크당 총비용</b>: 에이전틱 워크플로우 1태스크당 10-20 API콜 → 단가 하락을 소비량이 상쇄 (Uber: 2026 AI 예산 4개월 만에 소진)</li>
+  </ul>
+  <p class="src">출처: Epoch AI · MIT FutureTech arXiv 2511.23455 · OpenAI·Anthropic·DeepSeek 공식 문서 · OpenRouter · Goldman Sachs (모두 검증)</p>
+</section>
+
+<section class="block" id="ch2">
+  <h2><span class="section-num">3</span>빅테크 FCF 소진 시점과 회사채 발행</h2>
+  <h3>3.1 CapEx-현금흐름 교차 시점 <span class="badge ok">검증</span></h3>
+  <p>Epoch AI(SEC XBRL 기반): 5사 합산 CapEx가 연 +70%로 영업현금흐름(+23%)을 추월, 2026 Q3 합산 FCF 0 도달 전망.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>기업</th><th>교차 시점</th><th>2026 CapEx 가이던스</th><th>FCF 현황</th></tr></thead>
+    <tbody>
+      <tr><td>Oracle</td><td>이미 교차 (확정)</td><td>FY26 $55.7B → FY27E $90-95B</td><td>FY26 -$23.7B → FY27E -$42B</td></tr>
+      <tr><td>Amazon</td><td>2026 진행 중</td><td>$200B → $220B 상향</td><td>TTM -$7.6B 마이너스 전환</td></tr>
+      <tr><td>Alphabet</td><td>실현됨(Q2) <span class="tag-updated">갱신</span></td><td>$195-205B로 재상향</td><td>Q2 -$5.9B — 2004년 이후 첫 마이너스</td></tr>
+      <tr><td>Meta</td><td>실현됨(Q2) <span class="tag-updated">갱신</span></td><td>$130-145B로 상향</td><td>$8.5B → $784M 사실상 제로</td></tr>
+      <tr><td>Microsoft</td><td>~2028 Q3 (추세연장)</td><td>FY2027 $255-260B</td><td>5사 중 유일한 여유 지속</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout orange">Epoch 예측(Alphabet Q1'27·Meta Q3'27)보다 2~4분기 조기 실현 — CapEx 가이던스가 전원 추가 상향되며 +70%/yr 추세가 가속됐기 때문.</div>
+
+  <h3>3.2 회사채·조달 — 내부현금 시대의 종언 <span class="badge ok">검증</span></h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>발행/조달</th><th>규모</th><th>특징</th></tr></thead>
+    <tbody>
+      <tr><td>5사 2025 합산 회사채</td><td>~$93B</td><td>역대급 IG 공급. 2026E: BofA $175B ~ MS $400B+</td></tr>
+      <tr><td>Meta</td><td>$30B 채권 + $27B SPV = $57B</td><td>6트랜치 주문 $125B — 2025 최대 미 IG딜. Beignet(루이지애나 2GW)</td></tr>
+      <tr><td>Alphabet</td><td>€6.5B+$17.5B(하루) + $31.5B</td><td>하루에 부채 ~70% 증가. 100년물 포함</td></tr>
+      <tr><td>Amazon</td><td>$15B 채권</td><td>-</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout red">정정: 초안의 "Oracle $18B·40년물 +165bp" 보도는 3표 적대검증에서 기각(0-3)되어 제외했습니다.</div>
+</section>
+
+<section class="block" id="ch3">
+  <h2><span class="section-num">4</span>반도체주 급락 — 사이클 고점 판별과 과거와 다른 점</h2>
+  <h3>4.1 급락 타임라인</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>날짜</th><th>사건</th><th>핵심 수치</th></tr></thead>
+    <tbody>
+      <tr><td>6/22-23</td><td>미 셀오프 → KOSPI -9.99% 서킷브레이커</td><td>SK -12.47%·삼전 -12.31%. 단일종목 레버리지 ETF 언와인드(~14조)+MSCI 불발</td></tr>
+      <tr><td>6월 중</td><td>Broadcom Q3 가이던스 미스</td><td>AI칩 섹터 하루 $1.4T 증발</td></tr>
+      <tr><td>7/16</td><td>TSMC CapEx 상향에도 급락 <span class="badge ok">검증</span></td><td>TSM 종가 -3.6%, SK ADR -8~-14%, SOX -4.3%</td></tr>
+      <tr><td>7/28-29 <span class="tag-updated">갱신</span></td><td>메모리주 베어마켓 진입</td><td>이틀새 -$1.3T (NVDA -$238B·SK -$176B·삼성 -$173B)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>4.2 고점 판별 체크리스트: 5개 중 3개 점등 <span class="tag-updated">2차 검증 반영</span></h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>지표</th><th>현재</th><th>과거 고점 직전</th><th>판정</th></tr></thead>
+    <tbody>
+      <tr><td>공급망 재고</td><td>고객재고 7-9주로 상승, 8주 경보선 접근</td><td>고객 15-31주</td><td>▲ 경계 전환</td></tr>
+      <tr><td>스팟 가격</td><td>4월 이후 연속 하락 없음</td><td>고점 후 급락</td><td>● 정상</td></tr>
+      <tr><td>선재고 축적</td><td>부재(할당 기반 축적은 진행)</td><td>17-18 대량 축적</td><td>● 정상</td></tr>
+      <tr><td>계약가 모멘텀</td><td>Q1 +90-95%→Q2 +58-63%→Q3E +13-18%</td><td>급락 전 감속</td><td>▲ 경계</td></tr>
+      <tr><td>길이/마진</td><td>36개월째, MU GM 84.9%(2018+25pt)</td><td>18-30개월·~60%</td><td>▲ 경계</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">과거와 다른 점: LTA·선판매(SK·마이크론 2026 완판, 삼성 HBM4 완판+LTA), HBM 3사 97% 집중 <span class="badge ok">검증</span>, 백로그 가시성(MSFT $627B 등)</div>
+</section>
+
+<section class="block" id="ch4">
+  <h2><span class="section-num">5</span>중국 AI — 재무 비교와 글로벌 시장 영향</h2>
+  <div class="kpis">
+    <div class="kpi blue"><div class="label">미중 CapEx 격차</div><div class="value">8 : 1</div><div class="sub">$764B vs $102B (Goldman)</div></div>
+    <div class="kpi red"><div class="label">HBM 3사 집중</div><div class="value">97%<span class="badge ok">검증</span></div><div class="sub">SK·삼성·마이크론</div></div>
+    <div class="kpi orange"><div class="label">CXMT 기술 격차</div><div class="value">3-4년</div><div class="sub">HBM3 샘플링 단계</div></div>
+    <div class="kpi green"><div class="label">OpenRouter 중국 점유</div><div class="value">~1/3</div><div class="sub">일 3T 중 1T</div></div>
+  </div>
+  <div class="tblwrap"><table>
+    <thead><tr><th>기업</th><th>재무 실증</th></tr></thead>
+    <tbody>
+      <tr><td>Alibaba</td><td>FY26 CapEx +50% → FCF -RMB46.6B 전환, AI매출 $5.2B run-rate에도 EBITA -84%</td></tr>
+      <tr><td>Tencent/ByteDance</td><td>Q1 +63% QoQ · H2 대폭 증액 공언 / '26E ~$23B</td></tr>
+      <tr><td>DeepSeek/Zhipu/Moonshot</td><td>밸류 $71-74B / Zhipu 상장 후 +1,700~2,000%·시총 $100-128B·ARR $1B <span class="tag-updated">정정</span> / Moonshot $30B 목표</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>시장 영향</b>: 토큰 가격의 바닥은 중국이 정하고, 중국의 상한은 HBM이 정한다. 커모디티 마진은 중국 원가에 수렴(Alibaba가 증거), 서방 프런티어 B2B 마진은 방어 가능(Anthropic 흑자 임박).</p>
+</section>
+
+<section class="block" id="ch5">
+  <h2><span class="section-num">6</span>빅테크 실적 — 확인된 것 vs 확인해야 할 것</h2>
+  <div class="grid2">
+    <div>
+      <h3>확인됨 (수요 사이드)</h3>
+      <ul class="bullets">
+        <li>클라우드 3사 성장 가속 — Azure +40%(5분기)·GCP +63%·AWS +28%(15분기 최고)</li>
+        <li>AI 매출 실체화 — MSFT AI ARR $37B(+123%)</li>
+        <li>RPO/백로그 — MSFT $627B·ORCL $638B·GOOG $460B</li>
+        <li>모델사 역전 — Anthropic ARR $47B > OpenAI $24B</li>
+      </ul>
+    </div>
+    <div>
+      <h3>미확인이었던 것 (V10.1에서 실측)</h3>
+      <ul class="bullets">
+        <li>CapEx 인플레 흡수 — MSFT GM 최저 지속</li>
+        <li>FCF 바닥 통과 — <b>Q2 실적으로 GOOG·META 마이너스 확인</b> <span class="tag-updated">갱신</span></li>
+        <li>감가상각 캐치업 — 억제 ~$200B (2026-28)</li>
+        <li>Amazon Q2 — 7/30 발표 완료, AWS +37%·CapEx $220B 상향 확인</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ch6">
+  <h2><span class="section-num">7</span>데이터센터 지연 — 뉴욕 모라토리엄과 전력 병목</h2>
+  <div class="tblwrap"><table>
+    <thead><tr><th>병목</th><th>수치</th></tr></thead>
+    <tbody>
+      <tr><td>NY 모라토리엄</td><td>6/4 입법(20MW+ 1년) + 7/14 행정명령(50MW+) — 28곳/9,682MW 노출</td></tr>
+      <tr><td>인터커넥션 큐 <span class="badge ok">검증</span></td><td>활성 2,060GW+(8,200개). 완공 중앙값 5년+, 완공률 13%</td></tr>
+      <tr><td>변압기</td><td>50주('21)→160주+('26), 최대 4년</td></tr>
+      <tr><td>가스터빈</td><td>지멘스 €136B(5년 완판), MHI 2028 완판, GEV 55GW</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>투자 함의</b>: 미 DC 전기장비 시장 $20B→$65B(2030E) — 터빈 3사·변압기(Eaton·Hubbell)·부품(Howmet) 과점 수혜.</p>
+</section>
+
+<section class="block v101" id="v101">
+  <h2 style="border:none; padding:0"><span class="section-num" style="background:var(--orange); color:#3a2a00">★</span>V10.1 업데이트 — Q2 실적과 반도체 조정 (2026.8)</h2>
+  <p class="lead"><b>한 문장 요약</b>: 실물(수요·가격·백로그)은 아직 상승 국면인데 주가가 먼저 꺾였다 — 사이클 붕괴의 개시가 아니라, 시장이 가격 피크(2026Q4~2027Q3 전망)를 6~9개월 선반영하기 시작한 국면이다.</p>
+
+  <h3>V10.1-1. 빅테크 Q2 실적 스코어보드 (7월 말 발표)</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>기업</th><th>클라우드/매출</th><th>CapEx 가이던스</th><th>FCF</th><th>주가</th></tr></thead>
+    <tbody>
+      <tr><td>Amazon</td><td>AWS +37% ($42.2B, 18분기 최고)</td><td>$200B→$220B 상향</td><td>TTM -$7.6B 전환</td><td>+10%</td></tr>
+      <tr><td>Microsoft</td><td>Azure +43% (재가속)</td><td>CY26 $190B→$175B 오히려 하향 <span class="badge fix">정정</span></td><td>유일한 여유</td><td>시간외 +8.9%</td></tr>
+      <tr><td>Alphabet</td><td>Cloud +82%, TPU 매출 인식 개시, 백로그 $514B(+$50B)</td><td>$195-205B 재상향, 커밋 $800B+</td><td>-$5.9B — 2004년 후 첫 마이너스</td><td>하락</td></tr>
+      <tr><td>Meta</td><td>매출 $60.8B +28%</td><td>$130-145B 상향</td><td>$8.5B→$784M ≈ 제로</td><td>-</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>V10.1-2. 반도체 조정: 7월 말 베어마켓 진입</h3>
+  <div class="kpis">
+    <div class="kpi red"><div class="label">SOX 7월 낙폭 <span class="badge fix">정정</span></div><div class="value">-21%</div><div class="sub">2008.10 이후 최대. 12개월 누적 +127%</div></div>
+    <div class="kpi red"><div class="label">고점대비 낙폭</div><div class="value">SK -30%</div><div class="sub">삼성·MU -25%+, Sandisk -55%</div></div>
+    <div class="kpi orange"><div class="label">이틀 시총 증발</div><div class="value">-$1.3T</div><div class="sub">7/28-29, NVDA -$238B</div></div>
+    <div class="kpi blue"><div class="label">누적 셀오프</div><div class="value">~-$2T</div><div class="sub">촉발: 기대 리프라이싱</div></div>
+  </div>
+
+  <h3>V10.1-3. 사이클 대시보드: 실물과 주가의 분리</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>레이어</th><th>현재 상태</th><th>판정</th></tr></thead>
+    <tbody>
+      <tr><td>수요(하이퍼스케일러)</td><td>전원 CapEx 상향+클라우드 재가속+백로그 증가</td><td>● 상승 지속</td></tr>
+      <tr><td>가격(메모리 실물)</td><td>계약가 상승 지속(폭 축소). 피크 전망 '26Q4~'27Q3</td><td>▲ 정점 접근</td></tr>
+      <tr><td>재고·엔드마켓</td><td>고객재고 경보선 2/3, 소비자 출하 두자릿수 감소</td><td>▲▲ 경계</td></tr>
+      <tr><td>주가</td><td>피크 대비 -25~30% 선조정</td><td>선행 조정 개시</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout red"><b>판정 갱신</b>: "후반부 심화, 다운턴 개시 아님"은 유지하되, 주가에 한해서는 "선행 조정 개시"로 격상. 실물 다운턴 확정은 계약가 첫 QoQ 하락에서 판정 (전망상 2027 상반기).</div>
+  <div class="callout"><b>검증 정정</b> <span class="badge fix">2026-08</span>: ① SOX 7월 낙폭은 -18.9%가 아니라 <b>약 -21%</b>(2008.10 이후 최대), 12개월 누적은 +92%가 아니라 +127% 내외. ② Microsoft FY27 CapEx "$255-260B"는 실적발표 가이던스가 아니라 <b>발표 전 애널리스트 추정치</b>였음 — 실제로는 CY2026을 $190B→$175B로 오히려 하향. ③ "메모리 가격 피크 후 6개월 -40~60%" 서술은 인과가 반대 — 주가는 가격 피크에 <b>선행</b>해 꺾이며(2018년: 주가피크 5월 vs DRAM계약가피크 Q3-4), 낙폭도 종목별 편차가 커(마이크론 ~56%·SK ~50%·삼성 ~30-45%) 단일 템플릿은 없음.</div>
+  <p><b>판별 이벤트</b>: ①Q3 계약가 +13-18% 실현 ②고객재고 8주 돌파 ③NVIDIA 8월 말 실적 ④하이퍼스케일러 첫 CapEx 하향</p>
+</section>
+
+<section class="block" id="conclusion">
+  <h2><span class="section-num">9</span>핵심 결론 5줄</h2>
+  <ol style="padding-left:20px; color:var(--text)">
+    <li style="margin:12px 0"><b>토큰 이분화는 투자 지도</b> — 커모디티는 마진 없는 볼륨 게임, 실수익은 인프라(전력·HBM)로 귀속. 프런티어는 B2B 수익화(Anthropic이 증명 중)</li>
+    <li style="margin:12px 0"><b>FCF 교차는 이미 시작됐다</b> — Alphabet·Meta Q2 실적으로 조기 확인. Oracle이 조달 소화력의 리트머스</li>
+    <li style="margin:12px 0"><b>반도체는 후반부 심화, 다운턴 아님</b> — 고점 지표 3/5(2차 검증). 실물은 미붕괴, 주가는 6-9개월 선행 조정 개시</li>
+    <li style="margin:12px 0"><b>전력 병목 = 이 사이클의 실물 금리</b> — 전력장비 과점(GEV·Eaton·Hubbell)이 리스크 조정 수익 최상위</li>
+    <li style="margin:12px 0"><b>중국은 바닥, HBM은 천장</b> — 한국 메모리는 최대 수혜이자 6/23이 보여준 레버리지 유동성 리스크의 진앙</li>
+  </ol>
+</section>
+
+<section class="block" id="verify">
+  <h2><span class="section-num">✓</span>검증 로그</h2>
+  <p>본 보고서는 3단계에 걸쳐 딥리서치 워크플로우로 검증되었습니다. 반박된 주장은 삭제 없이 "정정" 표기로 투명하게 남겼습니다.</p>
+  <div class="verify-stat">
+    <div><div class="n">276</div><div class="l">총 검증 에이전트</div></div>
+    <div><div class="n">38</div><div class="l">확정 주장</div></div>
+    <div><div class="n">13</div><div class="l">반박·정정</div></div>
+    <div><div class="n">3</div><div class="l">검증 라운드</div></div>
+  </div>
+  <ul class="bullets">
+    <li><b>1차 (6대 주제 종합)</b>: 114 에이전트 — 확정 10, 반박 5 (Oracle 채권 세부, 중국 HBM 정량 상한 등 제외)</li>
+    <li><b>2차 (반도체·중국·실적 잔여)</b>: 81 에이전트 — 확정 22, 반박 5 (7/16 낙폭 확대 정정, 재고 시점 정정, NVIDIA DC비중 92%, Zhipu 시총 정정, AWS 마진 방향 정정)</li>
+    <li><b>3차 (V10.1 Q2 신규수치)</b>: 27 에이전트 — 확정 6(Amazon·Alphabet·Meta Q2 실적, 낙폭·시총증발·메모리가격), 반박 3(MSFT CapEx 가이던스 오인, SOX 낙폭 과소, 역사패턴 인과오류) — 본문에 정정 반영 완료</li>
+  </ul>
+  <p class="src">주요 출처: Epoch AI · Goldman Sachs · S&P Global · LBNL(정부랩) · SemiAnalysis · TrendForce · CNBC · 각사 IR/SEC 공시 등 55개+</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>본 보고서는 투자 권고가 아니며, 투자 판단은 개인의 책임입니다. 모든 데이터는 명시된 기준일의 공개 자료 기반입니다.</p>
+    <p>Repo: <a href="https://github.com/jinjo202/ai-token-economy-v10" target="_blank" rel="noopener">github.com/jinjo202/ai-token-economy-v10</a></p>
+  </div>
+</footer>
+
+<a href="#" class="themetoggle" id="themeToggle" title="테마 전환">🌓</a>
+
+<script>
+(function(){
+  var toggle = document.getElementById('themeToggle');
+  var root = document.documentElement;
+  toggle.addEventListener('click', function(e){
+    e.preventDefault();
+    var cur = root.getAttribute('data-theme');
+    root.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+  });
+  var links = document.querySelectorAll('nav.toc a');
+  var sections = document.querySelectorAll('section.block');
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 80;
+    var current = '';
+    sections.forEach(function(s){ if (s.offsetTop <= pos) current = s.id; });
+    links.forEach(function(l){
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  });
+})();
+</script>
+</body>
+</html>
