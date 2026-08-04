@@ -122,7 +122,7 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
     <p class="subtitle">딥리서치 투자분석 보고서 V10.1 — 토큰가격 이분화 · 빅테크 FCF·회사채 · 반도체 사이클 고점 · 중국 AI · 실적 체크리스트 · 데이터센터 병목</p>
     <div class="meta">
       <span class="chip">📅 2026년 8월 (V10.1) · 기준일 2026-07-18 / Q2 실적 반영 2026-08</span>
-      <span class="chip verify">✓ 총 299개 에이전트, 4단계 적대적 검증</span>
+      <span class="chip verify">✓ 총 323개 에이전트, 5단계 적대적 검증</span>
       <span class="chip">💰 자본 사이클 심층 추가</span>
       <span class="chip">🔗 v9(2026-06-24) 후속</span>
     </div>
@@ -447,7 +447,116 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
       <div class="callout green" style="margin-top:16px"><b>우선순위 원칙</b>: FCF 음수 국면에서는 <b>조달 지표가 실적 지표보다 선행</b>합니다. 조달이 순조로우면 FCF 마이너스 자체는 견딜 수 있습니다(Amazon 2013 선례).</div>
     </div>
   </div>
-  <p class="src">출처: Goldman Sachs "Tracking Trillions"(2026.5) · McKinsey · Morgan Stanley · Citigroup · Epoch AI 1GW TCO · Thunder Said Energy · Dell'Oro · TrendForce · S&P(Oracle 강등) · Moody's · FactSet · Bloomberg 외 40개+</p>
+  <h3>C-7. GDP로 환산하면 얼마나 큰 돈인가 <span class="tag-updated">2026.8 추가</span></h3>
+  <div class="callout red"><b>검증 정정 <span class="badge fix">0-3</span></b>: 흔히 인용되는 "AI CapEx가 미국 GDP의 2~3%"는 <b>분자에 글로벌 기업 지출, 분모에 미국 GDP</b>를 넣은 정의 불일치입니다. 미국 국내 기준 실제는 <b>0.8~1.5%</b>.</div>
+  <div class="tblwrap"><table>
+    <thead><tr><th>정의</th><th>GDP 비중</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td>AI 데이터센터 (미국 국내, 협의)</td><td><b>0.8%</b></td><td>Epoch AI 2026 1Q — 추세 초과분만 AI 귀속</td></tr>
+      <tr><td>컴퓨팅 인프라 전체</td><td><b>1.5%</b></td><td>2015-22 평균 0.7% 대비 2배</td></tr>
+      <tr><td>기업 CapEx 총액 ÷ 미국 GDP <span class="badge fix">정의 오류</span></td><td>2.0~2.2%</td><td>글로벌 지출을 미국 GDP로 나눈 값 — 과대계상</td></tr>
+      <tr><td>데이터센터 건설만 (Census C30)</td><td>0.16%</td><td>$50.7B SAAR (+28% YoY), 장비 제외</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tblwrap"><table>
+    <thead><tr><th>역사적 비교</th><th>GDP 대비 피크</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td>1880년대 철도</td><td>평균 2.4%, 피크 ~6%</td><td>전체 투자의 15-20%</td></tr>
+      <tr><td>1950년대 말 공공 인프라</td><td>3% 초과</td><td>고속도로 포함</td></tr>
+      <tr><td>1996-2000 통신버블 <span class="badge fix">정정</span></td><td>1.2~1.3% (2000 피크)</td><td>"약 1%"는 5년 평균 — 피크는 더 높음</td></tr>
+      <tr><td><b>2026 AI</b></td><td><b>0.8% / 1.5%</b></td><td>통신 피크는 컴퓨팅 전체 기준으로만 상회</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="bullets">
+    <li><b>GDP 성장 기여도</b>: 2025년 상반기 AI CapEx <b>+1.1%p</b>(JPMorgan AM), 2026년 2분기 <b>0.79%p</b>(성장 1.5% 중 53%). Furman의 "성장의 92%"는 정보처리장비+소프트웨어 기준으로 AI 단독이 아니며 기여도의 <b>상한</b></li>
+    <li><b>결정적 차이는 감가상각 수명</b>: 철도·고속도로 50~100년, 광섬유 20년+ vs GPU 데이터센터 <b>3~6년</b>. 같은 GDP 비중이라도 재투자 부담이 구조적으로 훨씬 크다</li>
+    <li><b>$7T의 크기</b>: 미국 연간 명목 GDP($32.5T)의 <b>21.5%</b>(약 2.6개월치), 미국 기업 세후이익(연 $3.62T)의 <b>1.9년치</b></li>
+  </ul>
+
+  <h3>C-8. 자금 배분 세부 — 토지는 의외로 작다 <span class="tag-updated">2026.8 추가</span></h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>항목</th><th>$/MW</th><th>비중</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td>IT (서버·GPU·네트워크)</td><td>약 $23M</td><td>전체의 ~60%</td><td>Epoch AI 1GW 모델</td></tr>
+      <tr><td>전기 인프라 (수배전·UPS·발전기)</td><td>$4.8~7.2M</td><td>건설비의 40~48%</td><td>액랭 전환 시 54%→48%</td></tr>
+      <tr><td>냉각 (액랭 기준)</td><td>$3.5~5.0M</td><td>건설비의 29~33%</td><td>공랭은 22%</td></tr>
+      <tr><td>건물 shell·구조</td><td>$1.8~2.3M</td><td>건설비의 ~15%</td><td>—</td></tr>
+      <tr><td><b>토지(부지) 취득</b></td><td>변동</td><td><b>전체의 1~6%</b></td><td>자료별 정의 차이 커 신뢰도 낮음</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><b>토지가 1~6%에 불과</b> — 데이터센터는 "부동산"이 아니라 <b>"전기설비 + 컴퓨터" 사업</b>입니다. 부지 가치로 밸류에이션하면 오판.<br><br>· 전력 인터커넥션·유틸리티 부담금: 프로젝트당 $5M~$60M<br>· <b>자가건설 60% : 임차 40%</b>(용량 기준) — 임차분은 CapEx가 아닌 리스로 계상되어 <b>오프밸런스 $1.2T의 정체</b></div>
+
+  <h3>C-9. 사모펀드 환매 사태 — 원인이 오해되고 있다 <span class="tag-updated">2026.8 추가</span></h3>
+  <div class="callout red"><b>원인 정정</b>: 데이터센터 대출 부실이 아니라 <b>"AI가 SaaS 차주를 대체한다"는 우려</b>가 1차 방아쇠였습니다(Blue Owl OTIC 경영진 공시 사유). 데이터센터는 원인이 아니라 <b>유동성 압박의 전염 경로</b>로 작동했습니다.</div>
+  <div class="tblwrap"><table>
+    <thead><tr><th>펀드</th><th>규모</th><th>환매 요청</th><th>집행</th><th>유형</th></tr></thead>
+    <tbody>
+      <tr><td>Blue Owl OBDC II</td><td>$1.6B</td><td>tender 폐지</td><td>청산 모드</td><td><b>완전 중단 (유일)</b></td></tr>
+      <tr><td>Blue Owl OTIC</td><td>$4.9B</td><td><b>40.7%</b> (최고)</td><td>5%</td><td>5% 캡 비례배분</td></tr>
+      <tr><td>Blue Owl OCIC</td><td>—</td><td>21.9%</td><td>5%</td><td>5% 캡</td></tr>
+      <tr><td>Cliffwater CCLFX</td><td>$33B</td><td>17% (Q2)</td><td>5%</td><td>상한 7%→5% 하향</td></tr>
+      <tr><td>Blackstone BCRED</td><td>$79B (최대)</td><td>약 10%</td><td>5%</td><td>5% 캡</td></tr>
+      <tr><td>Apollo ADS / Ares ASIF</td><td>$14.7B / $10.5B</td><td>11.2% / 11.6%</td><td>5%</td><td>5% 캡</td></tr>
+      <tr><td>(반례) Goldman PCC</td><td>—</td><td>3.24%</td><td><b>전액 충족</b></td><td>캡 미발동</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="bullets">
+    <li><span class="badge ok">검증 3-0</span> 환매 제한 발생은 사실. 단 <b>"중단"이 아니라 기존 계약상 5% 분기 캡의 비례배분(proration)</b>이 정확한 표현. 완전 중단은 Blue Owl OBDC II 1건뿐이나, <b>전 업계 동시 발동은 전례 없음</b></li>
+    <li>반례 존재: Goldman PCC 전액 충족, BCRED는 Q1에 한도를 7%로 상향하고 자체 $400M 출자 — <b>섹터 전면 위기는 아님</b></li>
+  </ul>
+
+  <h3>C-10. 돈 빌려준 쪽은 괜찮은가 — 손실 전이 경로 <span class="tag-updated">2026.8 추가</span></h3>
+  <div class="kpis">
+    <div class="kpi orange"><div class="label">AI 외부조달 필요액</div><div class="value">$1.5T</div><div class="sub">총 $2.9T 중 (MS→FSB)</div></div>
+    <div class="kpi red"><div class="label">사모신용 몫</div><div class="value">$800B</div><div class="sub">최대 조달 채널 (1,200조원)</div></div>
+    <div class="kpi red"><div class="label">사모신용 딜 중 AI</div><div class="value">34%</div><div class="sub">2020-24 평균 17%에서 2배</div></div>
+    <div class="kpi blue"><div class="label">DC 증권화 잔액</div><div class="value">$61B</div><div class="sub">2020년 $4B → 15배</div></div>
+  </div>
+  <div class="callout red"><b>핵심 판단: 신용 건전성보다 펀딩 건전성이 먼저 깨졌다.</b> 2026 상반기 실제 스트레스는 데이터센터 대출 부실이 아니라 <b>리테일 semi-liquid 래퍼(비상장 BDC·인터벌펀드)의 환매 러시</b>였습니다. AI 수요 둔화 시 1차 병목은 자산이 아니라 <b>부채(펀딩)</b> 쪽입니다.</div>
+  <ul class="bullets">
+    <li><b>전이 경로</b>: 리테일 401k·인터벌펀드 → 비상장 BDC / 생보사 → CLO($276.8B, 82%가 생보) / 연기금 → 사모신용 직접</li>
+    <li><b>단일 실패점</b>: 은행 이탈 → PIMCO·BlackRock·Blue Owl 등 소수 대형 운용사로 집중. Moody's는 비상장 BDC 섹터($400B) 아웃룩을 <b>negative로 하향</b>(2026-04-07)</li>
+    <li><b>선별 신호</b>: Blue Owl이 Oracle의 $10B 미시간 데이터센터 자금공급 참여를 <b>거절</b> — 대주들이 이미 차주를 가리기 시작</li>
+  </ul>
+
+  <h3>C-11. 회사채, 계속 발행 가능한가 — 여력의 정량 분석 <span class="tag-updated">2026.8 추가</span></h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>기업</th><th>순현금/순부채</th><th>등급</th><th>여력 서열</th></tr></thead>
+    <tbody>
+      <tr><td>Alphabet</td><td><b>+$144.3B</b></td><td>AA+ / Aa2</td><td>1위</td></tr>
+      <tr><td>Microsoft</td><td>+$36.5B</td><td><b>AAA / Aaa (유일)</b></td><td>2위</td></tr>
+      <tr><td>Meta</td><td>+$6.6B</td><td>Debt/EBITDA 1x 미만 조건부 Aa3</td><td>3위</td></tr>
+      <tr><td>Amazon</td><td>-$10B (유일한 순부채)</td><td>AA / A1 (전망 Positive)</td><td>4위</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><span class="badge fix">검증 0-3</span> "Microsoft가 유일한 순현금"은 오류 — <b>Alphabet 순현금($144B)이 더 큽니다</b>. 정확한 표현은 "MS는 유일한 AAA".</div>
+  <div class="tblwrap"><table>
+    <thead><tr><th>항목</th><th>수치</th><th>해석</th></tr></thead>
+    <tbody>
+      <tr><td>Goldman 추정 4사 부채여력</td><td>$1.3~1.4T</td><td>순레버리지 2.0x 가정 — <b>오프밸런스 리스 미반영</b></td></tr>
+      <tr><td>오프밸런스 DC 리스</td><td>$1.2T</td><td>직접부채 $460B의 2.6배. S&P가 조정부채 편입 예고</td></tr>
+      <tr><td><b>조정 후 실효 잔여 여력</b></td><td><b>$700~800B</b></td><td>2027 발행 전망 $400B 기준 <b>약 2년치</b></td></tr>
+      <tr><td>하이퍼스케일러 발행 (26.6초)</td><td>$159B (+47%)</td><td>IG 시장의 약 6~9%</td></tr>
+      <tr><td>2025-27 미국 회사채 만기</td><td>$4.2T (IG 60%)</td><td>2026-28 연간 $1조 초과</td></tr>
+      <tr><td>쿠폰 리셋 갭</td><td>1~2% → 5%</td><td>2020-21 발행분 차환 시 약 300bp 상승</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout red"><b>답: "계속 가능"하나 조건부.</b> 명목 여력은 있으나 오프밸런스 리스를 반영하면 <b>약 2년치</b>이며, 물량 한계보다 <b>가격(청약배수 1.6배·컨세션 12bp)이 먼저 제약</b>합니다. 4사 모두 명시적 수치 다운그레이드 트리거를 공개하지 않았고, 실질 트리거는 ①조정부채 정의 확대 ②FCF 마이너스 지속 기간 ③AI 매출의 EBITDA 전환 속도입니다.</div>
+
+  <h3>C-12. 클라우드 사이클과의 정량 비교 <span class="tag-updated">2026.8 추가</span></h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>축</th><th>클라우드 (2010-20)</th><th>AI (2024-26)</th><th>통신버블 (1996-2000)</th></tr></thead>
+    <tbody>
+      <tr><td><b>CapEx/매출</b></td><td>4~14%</td><td><b>25~86%</b> (ORCL 86%)</td><td>매출 대비 100%+ 다수</td></tr>
+      <tr><td>FCF</td><td>전 기간 플러스</td><td>2026 GOOG·MSFT 제외 0/마이너스</td><td>대규모 마이너스</td></tr>
+      <tr><td><b>자금조달</b></td><td>사실상 100% 내부현금</td><td><b>증분의 32%가 외부조달</b></td><td>부채 중심</td></tr>
+      <tr><td><b>수요 가시성</b></td><td>백로그 공시 없음</td><td><b>RPO 합계 $2.3T</b></td><td>"트래픽 100일마다 2배" 추정</td></tr>
+      <tr><td>GDP 비중</td><td>미미</td><td>0.8~1.5%</td><td>피크 1.2~1.3%</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout green"><b>핵심: 차이는 "수요 증거"가 아니라 "속도와 자금조달"이다.</b> AI는 통신버블보다 계약 백로그(RPO $2.3T)라는 실물 증거가 훨씬 강하지만, 투자 강도(3~6배)와 부채화 속도는 클라우드보다 통신버블 쪽에 가깝습니다.<br><br>· <b>클라우드 사이클 교훈</b>: 2015년 4월 AWS 세그먼트 공개(마진 17% 실증)가 반전 촉매 — 이번 사이클의 대응 이벤트는 <b>AI 매출의 손익 기여 실증</b><br>· 주의: Amazon CapEx는 금융리스 포함/제외 정의차가 1.5~2배 — 사이클 간 비교 시 동일 정의 필수</div>
+
+  <p class="src">출처: Goldman Sachs "Tracking Trillions"(2026.5) · McKinsey · Morgan Stanley · Citigroup · Epoch AI(1GW TCO·GDP share) · Thunder Said Energy · Turner&Townsend · Dell'Oro · TrendForce · BEA/FRED · JPMorgan AM · Furman(Harvard) · Richmond Fed Wolman(2003) · FSB(2026-05) · OECD Global Debt Report 2026 · NAIC · Moody's · S&P · Barclays/SFA Research · SIFMA · Synergy Research · Platformonomics 외 60개+</p>
 </section>
 
 <section class="block" id="conclusion">
@@ -466,16 +575,17 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
   <h2><span class="section-num">✓</span>검증 로그</h2>
   <p>본 보고서는 3단계에 걸쳐 딥리서치 워크플로우로 검증되었습니다. 반박된 주장은 삭제 없이 "정정" 표기로 투명하게 남겼습니다.</p>
   <div class="verify-stat">
-    <div><div class="n">299</div><div class="l">총 검증 에이전트</div></div>
-    <div><div class="n">40</div><div class="l">확정 주장</div></div>
-    <div><div class="n">17</div><div class="l">반박·정정</div></div>
-    <div><div class="n">4</div><div class="l">검증 라운드</div></div>
+    <div><div class="n">323</div><div class="l">총 검증 에이전트</div></div>
+    <div><div class="n">43</div><div class="l">확정 주장</div></div>
+    <div><div class="n">20</div><div class="l">반박·정정</div></div>
+    <div><div class="n">5</div><div class="l">검증 라운드</div></div>
   </div>
   <ul class="bullets">
     <li><b>1차 (6대 주제 종합)</b>: 114 에이전트 — 확정 10, 반박 5 (Oracle 채권 세부, 중국 HBM 정량 상한 등 제외)</li>
     <li><b>2차 (반도체·중국·실적 잔여)</b>: 81 에이전트 — 확정 22, 반박 5 (7/16 낙폭 확대 정정, 재고 시점 정정, NVIDIA DC비중 92%, Zhipu 시총 정정, AWS 마진 방향 정정)</li>
     <li><b>3차 (V10.1 Q2 신규수치)</b>: 27 에이전트 — 확정 6(Amazon·Alphabet·Meta Q2 실적, 낙폭·시총증발·메모리가격), 반박 3(MSFT CapEx 가이던스 오인, SOX 낙폭 과소, 역사패턴 인과오류) — 본문에 정정 반영 완료</li>
     <li><b>4차 (자본 사이클)</b>: 23 에이전트 — 리서치 5축 + 핵심 6주장 검증. 확정 2, 정정 4 (Goldman $7.6T 기간 표기, <b>"전력 60%" 비율 반전</b>, 290GW 정의, MS $400B 커버리지) — 자본 사이클 섹션에 정정 반영</li>
+    <li><b>5차 (GDP·사모신용·조달주체)</b>: 24 에이전트 — 리서치 6축 + 핵심 6주장 검증. 확정 3, 정정 3 (<b>"GDP의 2~3%"는 분자·분모 불일치 → 실제 0.8~1.5%</b>, 통신버블 피크 1.2~1.3%, <b>"MS가 유일한 순현금"은 오류 — Alphabet이 더 큼</b>) — C-7~C-12에 반영</li>
   </ul>
   <p class="src">주요 출처: Epoch AI · Goldman Sachs · S&P Global · LBNL(정부랩) · SemiAnalysis · TrendForce · CNBC · 각사 IR/SEC 공시 등 55개+</p>
 </section>
