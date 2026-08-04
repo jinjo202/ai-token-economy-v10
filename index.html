@@ -122,7 +122,8 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
     <p class="subtitle">딥리서치 투자분석 보고서 V10.1 — 토큰가격 이분화 · 빅테크 FCF·회사채 · 반도체 사이클 고점 · 중국 AI · 실적 체크리스트 · 데이터센터 병목</p>
     <div class="meta">
       <span class="chip">📅 2026년 8월 (V10.1) · 기준일 2026-07-18 / Q2 실적 반영 2026-08</span>
-      <span class="chip verify">✓ 총 276개 에이전트, 2~3단계 적대적 검증</span>
+      <span class="chip verify">✓ 총 299개 에이전트, 4단계 적대적 검증</span>
+      <span class="chip">💰 자본 사이클 심층 추가</span>
       <span class="chip">🔗 v9(2026-06-24) 후속</span>
     </div>
   </div>
@@ -138,6 +139,7 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
     <a href="#ch5">⑤ 실적체크</a>
     <a href="#ch6">⑥ DC 지연</a>
     <a href="#v101">V10.1 업데이트</a>
+    <a href="#capital">💰 자본 사이클</a>
     <a href="#conclusion">결론</a>
     <a href="#verify">검증 로그</a>
   </div>
@@ -340,6 +342,114 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
   <p><b>판별 이벤트</b>: ①Q3 계약가 +13-18% 실현 ②고객재고 8주 돌파 ③NVIDIA 8월 말 실적 ④하이퍼스케일러 첫 CapEx 하향</p>
 </section>
 
+<section class="block v101" id="capital" style="border-color:rgba(59,130,246,.45); background:rgba(59,130,246,.06)">
+  <h2 style="border:none; padding:0"><span class="section-num">💰</span>자본 사이클 심층 — 얼마가 필요하고, 계속 가능한가 <span class="tag-updated">2026.8 신규</span></h2>
+  <p class="lead">딥리서치 23 에이전트 + 6개 핵심 주장 3표 적대검증(확정 2·정정 4)으로 네 질문에 답합니다: ①총 얼마 ②어디로 ③지금 어디 ④계속 가능한가.</p>
+
+  <h3>C-1. 총 얼마가 필요한가 — 3배 격차의 정체는 "정의"</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>기관</th><th>금액</th><th>기간</th><th>정의 범위</th></tr></thead>
+    <tbody>
+      <tr><td>Morgan Stanley</td><td>$2.9T</td><td>2025-28 (4년)</td><td>DC CapEx만 (물리 $1.3T + IT $1.6T), 발전소 제외</td></tr>
+      <tr><td>McKinsey (AI분)</td><td>$5.2T</td><td>~2030</td><td>DC 전체, 발전 $300B만 계상</td></tr>
+      <tr><td>Goldman Sachs <span class="badge fix">정정</span></td><td>$7.6T</td><td>2026-31 (6년)</td><td>컴퓨트+DC+전력 3축. "2030년까지" 표기는 오류(3표 반박)</td></tr>
+      <tr><td>Citigroup</td><td>$8.9T</td><td>2026-30</td><td>글로벌 전체 ($8T에서 상향)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">격차 3배는 낙관도가 아니라 ①기간(4년 vs 6년) ②<b>전력 포함 여부(총액 1.5~2배 차이)</b> ③대상 범위에서 발생. 정규화하면 연평균 <b>$700B~$1.3T</b>로 수렴하며, 전력 포함 중앙값은 <b>$6.5~7.5T(약 1경원)</b>.<br><br>⚠ Bain "$2T"는 투자액이 아니라 <b>투자를 정당화하는 데 필요한 연간 신규 매출액</b> — CapEx와 같은 축에 놓으면 오독입니다.</div>
+
+  <h3>C-2. 돈은 어디로 흐르는가 — 통념이 뒤집힌 지점</h3>
+  <div class="callout red"><b>중요 정정 <span class="badge fix">검증 0-3</span></b>: "전력 60% : 반도체 40%"는 3표 전원 반박. 1차 출처(Epoch AI 1GW TCO·Thunder Said Energy·Dell'Oro·McKinsey)는 모두 <b>IT 우위</b>를 가리킵니다.</div>
+  <div class="tblwrap"><table>
+    <thead><tr><th>구분</th><th>$/MW</th><th>원화/MW</th><th>비중</th></tr></thead>
+    <tbody>
+      <tr><td>GPU/ASIC (HBM 포함)</td><td>$19~20M</td><td>285~300억</td><td>~50%</td></tr>
+      <tr><td>기타 IT (CPU·서버DRAM·네트워크)</td><td>$4~6M</td><td>60~90억</td><td>~12%</td></tr>
+      <tr><td>전력 계통 (수배전·UPS·발전기)</td><td>$5~6M</td><td>75~90억</td><td>~14%</td></tr>
+      <tr><td>냉각 (액체냉각 포함)</td><td>$3~4M</td><td>45~60억</td><td>~9%</td></tr>
+      <tr><td>건물 shell·부지 + 설계·연계</td><td>$5~7M</td><td>75~105억</td><td>~15%</td></tr>
+      <tr><td><b>합계 (AI DC 1MW)</b></td><td><b>$38~40M</b></td><td><b>570~600억</b></td><td><b>IT 62% : 시설 38%</b></td></tr>
+    </tbody>
+  </table></div>
+  <ul class="bullets">
+    <li><b>GPU 원가의 45%가 HBM</b>(B200 티어다운) → AI DC 총투자의 <b>약 20%가 HBM 한 품목</b>으로 귀결</li>
+    <li>단, "비중은 반도체 · <b>병목은 전력</b>"이라는 통찰은 유효 — 계통 접속 대기 2,500GW, 가스터빈 2028년까지 매진</li>
+    <li>2026 CapEx 증가의 상당 부분은 물량이 아닌 <b>메모리 가격 인플레</b>(DRAM +303%, NAND +281%) — Meta·Microsoft가 실적발표에서 명시 인정</li>
+  </ul>
+
+  <h3>C-3. 지금 우리는 어디에 있는가 — 사이클의 10~13%</h3>
+  <div class="kpis">
+    <div class="kpi blue"><div class="label">현재 진척률</div><div class="value">10~13%</div><div class="sub">누적 $685~705B / 전체 $5.2~7.6T</div></div>
+    <div class="kpi orange"><div class="label">2026 CapEx</div><div class="value">$725~800B</div><div class="sub">+77% YoY (1,088~1,200조원)</div></div>
+    <div class="kpi green"><div class="label">2025 확정</div><div class="value">$405B</div><div class="sub">608조원 (2024 $270B)</div></div>
+    <div class="kpi red"><div class="label">발표 대비 실현율</div><div class="value">31%</div><div class="sub">2026년 · 2028년 이후는 12%</div></div>
+  </div>
+  <ul class="bullets">
+    <li>전망의 <b>대부분(약 90%)은 아직 집행되지 않은 "약속"</b> — 2027년 이후는 실적이 아니라 가정</li>
+    <li><span class="badge fix">검증 1-2</span> "2030년 290GW"는 <b>Gartner 전력수요 기준</b>. 공급 용량 기준 주류 전망은 JLL 200GW·McKinsey 219GW — 정의 명시 필수</li>
+    <li><b>발표 ≠ 착공 ≠ 가동</b>: 2026년 예정 16GW 중 실착공 5GW. 발표 GW로 밸류에이션하면 3~5배 과대계상. 단 하이퍼스케일러 자체건설분은 95%+ 실현</li>
+  </ul>
+
+  <h3>C-4. FCF 교차 이후 무엇을 봐야 하는가</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>기업</th><th>FCF 현황</th><th>CapEx/OCF</th><th>등급</th><th>지속가능성</th></tr></thead>
+    <tbody>
+      <tr><td>Microsoft</td><td>26Q4 +$19.6B</td><td>57%</td><td>AAA</td><td>매우 높음 — 순현금, 사실상 자체조달</td></tr>
+      <tr><td>Alphabet</td><td>26Q2 -$5.9B</td><td>63%</td><td>AA+</td><td>높음 — 현금+투자 $242B</td></tr>
+      <tr><td>Amazon</td><td>TTM -$7.6B</td><td>102%</td><td>AA-</td><td>중상 — 총부채 $133B(4사 최대)</td></tr>
+      <tr><td>Meta</td><td>26Q2 ≈0 ($0.78B)</td><td>61%</td><td>AA-</td><td>중 — SPV+잔존가치보증 $28B 우발채무</td></tr>
+      <tr><td>Oracle</td><td>FY26 -$23.7B</td><td>174%</td><td>BBB- (7/9 강등)</td><td>낮음 ⚠ — CDS 75bp 7년 최고</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><b>FCF가 음수인 국면에서는 손익이 아니라 조달이 판단 기준</b>입니다. 봐야 할 4가지: ①조달 비용(청약배수·컨세션 — 실적보다 선행) ②감가상각 인식 속도(2026년 $760B 지출 중 손익 인식은 $211B뿐, <b>$549B가 이연</b>되어 2027-29년 비용화) ③RPO/백로그의 실제 매출 전환율 ④CapEx 증가율 ÷ 클라우드 매출 증가율(현재 77% vs 28%로 괴리 확대)</div>
+
+  <h3>C-5. 회사채는 계속 발행 가능한가 — 소화력의 균열</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>지표</th><th>2025</th><th>2026</th><th>판정</th></tr></thead>
+    <tbody>
+      <tr><td>4사 발행액 (1~7월)</td><td>$108B (연간)</td><td>$194B</td><td>+79%</td></tr>
+      <tr><td><b>청약배수 (커버리지)</b></td><td>~5.0배 (26.2)</td><td><b>1.6배 (26.7)</b></td><td>수요 냉각 ⚠</td></tr>
+      <tr><td><b>뉴이슈 컨세션</b></td><td>2.25bp</td><td><b>12bp</b></td><td>5배 확대 ⚠</td></tr>
+      <tr><td>발행 후 가격</td><td>—</td><td>91개 중 78개 발행가 하회</td><td>세컨더리 약세</td></tr>
+      <tr><td>CapEx 중 부채조달</td><td>FY24 9%</td><td>32% (LTM)</td><td>자체조달 종료</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="bullets">
+    <li><b>오프밸런스 $1.2T</b>(리스 약정, 미개시 $820B) + SPV $120B+ — 온밸런스 부채 $460B의 <b>3배</b>. 표면 레버리지 지표가 경제적 실질을 과소평가</li>
+    <li>Meta는 Hyperion SPV에 <b>최대 $28B 잔존가치 보증</b> 제공 — 오프밸런스 자산에 대한 온밸런스 우발채무</li>
+    <li><span class="badge fix">검증 1-2</span> "Morgan Stanley $400B"는 하이퍼스케일러 채권이 아닌 <b>AI 관련 부채 전체($570B)</b> 기준 — BofA $175B(협의)와 직접 비교 불가</li>
+  </ul>
+  <div class="callout red"><b>판정</b>: 시장은 물량은 소화했으나 <b>가격 대가를 요구하기 시작</b>했습니다. 2027년 $400B 발행이 실현되려면 ①프라이빗크레딧 추가 흡수 ②발행 프리미엄 추가 확대 ③CapEx 가이던스 하향 중 <b>최소 하나</b>가 필요합니다.</div>
+
+  <h3>C-6. 실전 체크리스트</h3>
+  <div class="grid2">
+    <div>
+      <h3 style="margin-top:8px">발행할 때마다 (1순위)</h3>
+      <ul class="bullets">
+        <li>채권 <b>청약배수 1.5배 미만</b> = 소화 한계</li>
+        <li>뉴이슈 <b>컨세션 20bp 초과</b> = 경고 (현 12bp)</li>
+        <li>Oracle 다음 딜의 은행 vs 비은행 참여 비중</li>
+      </ul>
+      <h3 style="margin-top:16px">분기마다 (2순위)</h3>
+      <ul class="bullets">
+        <li>CapEx 가이던스 방향 — <b>첫 하향이 전환 신호</b></li>
+        <li>감가상각 인식 급증폭 (이연 $549B 소화)</li>
+        <li>클라우드 매출 성장률 15% 하회 여부</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-top:8px">월간 (3순위)</h3>
+      <ul class="bullets">
+        <li>대만 ODM 월매출 MoM 2개월 연속 마이너스</li>
+        <li>DRAM 계약가 QoQ — 첫 하락 = 실물 다운턴 확정</li>
+        <li>메모리 고객재고 8주 경보선</li>
+      </ul>
+      <div class="callout green" style="margin-top:16px"><b>우선순위 원칙</b>: FCF 음수 국면에서는 <b>조달 지표가 실적 지표보다 선행</b>합니다. 조달이 순조로우면 FCF 마이너스 자체는 견딜 수 있습니다(Amazon 2013 선례).</div>
+    </div>
+  </div>
+  <p class="src">출처: Goldman Sachs "Tracking Trillions"(2026.5) · McKinsey · Morgan Stanley · Citigroup · Epoch AI 1GW TCO · Thunder Said Energy · Dell'Oro · TrendForce · S&P(Oracle 강등) · Moody's · FactSet · Bloomberg 외 40개+</p>
+</section>
+
 <section class="block" id="conclusion">
   <h2><span class="section-num">9</span>핵심 결론 5줄</h2>
   <ol style="padding-left:20px; color:var(--text)">
@@ -348,6 +458,7 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
     <li style="margin:12px 0"><b>반도체는 후반부 심화, 다운턴 아님</b> — 고점 지표 3/5(2차 검증). 실물은 미붕괴, 주가는 6-9개월 선행 조정 개시</li>
     <li style="margin:12px 0"><b>전력 병목 = 이 사이클의 실물 금리</b> — 전력장비 과점(GEV·Eaton·Hubbell)이 리스크 조정 수익 최상위</li>
     <li style="margin:12px 0"><b>중국은 바닥, HBM은 천장</b> — 한국 메모리는 최대 수혜이자 6/23이 보여준 레버리지 유동성 리스크의 진앙</li>
+    <li style="margin:12px 0"><b>자본 사이클은 10~13% 지점, 병목은 조달</b> <span class="tag-updated">신규</span> — 총 $6.5~7.5T 중 $685~705B만 집행. 자금은 IT 62%로 흐르고(통념과 반대), FCF 교차는 이미 지났으며 <b>진짜 신호는 채권 청약배수(5→1.6배)</b></li>
   </ol>
 </section>
 
@@ -355,15 +466,16 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
   <h2><span class="section-num">✓</span>검증 로그</h2>
   <p>본 보고서는 3단계에 걸쳐 딥리서치 워크플로우로 검증되었습니다. 반박된 주장은 삭제 없이 "정정" 표기로 투명하게 남겼습니다.</p>
   <div class="verify-stat">
-    <div><div class="n">276</div><div class="l">총 검증 에이전트</div></div>
-    <div><div class="n">38</div><div class="l">확정 주장</div></div>
-    <div><div class="n">13</div><div class="l">반박·정정</div></div>
-    <div><div class="n">3</div><div class="l">검증 라운드</div></div>
+    <div><div class="n">299</div><div class="l">총 검증 에이전트</div></div>
+    <div><div class="n">40</div><div class="l">확정 주장</div></div>
+    <div><div class="n">17</div><div class="l">반박·정정</div></div>
+    <div><div class="n">4</div><div class="l">검증 라운드</div></div>
   </div>
   <ul class="bullets">
     <li><b>1차 (6대 주제 종합)</b>: 114 에이전트 — 확정 10, 반박 5 (Oracle 채권 세부, 중국 HBM 정량 상한 등 제외)</li>
     <li><b>2차 (반도체·중국·실적 잔여)</b>: 81 에이전트 — 확정 22, 반박 5 (7/16 낙폭 확대 정정, 재고 시점 정정, NVIDIA DC비중 92%, Zhipu 시총 정정, AWS 마진 방향 정정)</li>
     <li><b>3차 (V10.1 Q2 신규수치)</b>: 27 에이전트 — 확정 6(Amazon·Alphabet·Meta Q2 실적, 낙폭·시총증발·메모리가격), 반박 3(MSFT CapEx 가이던스 오인, SOX 낙폭 과소, 역사패턴 인과오류) — 본문에 정정 반영 완료</li>
+    <li><b>4차 (자본 사이클)</b>: 23 에이전트 — 리서치 5축 + 핵심 6주장 검증. 확정 2, 정정 4 (Goldman $7.6T 기간 표기, <b>"전력 60%" 비율 반전</b>, 290GW 정의, MS $400B 커버리지) — 자본 사이클 섹션에 정정 반영</li>
   </ul>
   <p class="src">주요 출처: Epoch AI · Goldman Sachs · S&P Global · LBNL(정부랩) · SemiAnalysis · TrendForce · CNBC · 각사 IR/SEC 공시 등 55개+</p>
 </section>
