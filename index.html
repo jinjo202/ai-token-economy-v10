@@ -784,6 +784,95 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
   </table></div>
   <div class="callout" style="border-left-color:#C00000"><b>⚠ 기준선 상충 주의</b> — Goldman의 "24배"는 기준연도를 월 5 quadrillion(≈164조/일)으로 잡은 값입니다. 그런데 실측 지수는 이미 <b>일 360조~430조</b>를 가리킵니다. 실측 기준선을 쓰면 2030년 목표까지는 <b>11배·CAGR 약 82%</b>로 완만해집니다. 즉 <b>Goldman 전망은 "배수"로 보면 공격적이지만 "절대 수준"으로 보면 오히려 보수적</b>일 수 있습니다. <b>배수보다 절대 수준으로 읽는 것이 안전합니다.</b></div>
   <p class="src">출처: Google I/O 2026(2026-05, Pichai) · Microsoft FY26 Q2/Q3 실적발표 · Goldman Sachs Research(2026-05-20, Jim Schneider) · McKinsey "The cost of compute" · arXiv 2605.26297 "Agentic AI Workload Characteristics"(2026-05-25) · OpenRouter State of AI · Menlo Ventures · Tokens Per Day Index(2026-07-16) · Epoch AI</p>
+
+  <h3 style="margin-top:34px">C-16. 엔비디아 "700조원" — 조달 스택에 4층이 생겼다 <span class="tag-updated">2026.8 신규</span></h3>
+
+  <div class="callout" style="border-left-color:#C00000">
+    <b>⚠ 먼저 헤드라인을 정정합니다.</b> "엔비디아가 700조원을 조달한다/투자한다"는 <b>부정확합니다.</b><br><br>
+    2026년 8월 10일 발표의 실체는 엔비디아가 Apollo·BlackRock·Blackstone·Brookfield·Goldman Sachs·KKR 6개 금융사와 맺은 <b>MOU</b>로, <b>제3자 자본(third-party capital) 5,000억 달러 이상을 동원</b>해 엔비디아 <b>고객이 GPU를 살 때 쓸 대출 풀</b>을 만들겠다는 것입니다. 보도자료 원문 제목이 "mobilize over $500 billion of <b>third-party</b> capital"입니다. <b>돈은 그 6개사가 냅니다.</b><br><br>
+    엔비디아가 지는 몫은 보도 기준 <b>GPU 담보의 잔존가치 하락분 최대 25% 보증</b>이며, 보도자료에도 <b>"최종계약 체결을 전제로(subject to execution of the final agreements)"</b>라고 명시돼 있습니다. 즉 아직 <b>MOU 단계</b>입니다.
+  </div>
+
+  <h4 style="margin-top:18px">구분해서 봐야 하는 3개 층 — 누가 리스크를 지는가</h4>
+  <div class="tblwrap"><table>
+    <thead><tr><th>층</th><th>규모</th><th>성격</th><th>내역</th></tr></thead>
+    <tbody>
+      <tr><td><b>① 실제 나간 현금</b></td><td><b>~$50B</b> (75조원)</td><td style="color:#C00000"><b>나간 돈</b></td><td>OpenAI $30B · Anthropic $10B · Intel $5B · xAI $2B · Nokia $1B · CoreWeave 등 지분투자</td></tr>
+      <tr><td><b>② 우발채무</b></td><td><b>~$111B</b> (166조원)</td><td style="color:#ED7D31"><b>조건부</b></td><td>OpenAI 오하이오 리스보증 최대 $105B(20년, OpenAI 디폴트 시에만 발동) + CoreWeave 오프테이크 백스톱 $6.3B</td></tr>
+      <tr><td><b>③ 제3자 자본 플랫폼</b></td><td><b>$500B</b> (700조원)</td><td style="color:var(--muted)"><b>남의 돈</b></td><td>월가 6사가 조성하는 고객 구매용 대출 풀. <b>MOU 단계, 최종계약 전</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">이 셋을 합쳐 "엔비디아가 700조를 쏜다"고 하면 전혀 다른 그림이 됩니다. <b>실제로 엔비디아 금고에서 나간 돈은 약 $50B</b>이고, 나머지는 조건부 보증과 남의 돈입니다. 참고로 오하이오 보증은 <b>7월에 $250B로 보도됐다가 8월 17일 8-K 공시에서 $105B로 절반 이하로 축소</b>됐는데, $250B 보도 당시 주가가 5% 빠진 데 대한 직접적 반응이었습니다.</div>
+
+  <h4 style="margin-top:18px">왜 이게 우리 자본 사이클 그림에서 중요한가</h4>
+  <div class="callout green" style="border-left-color:var(--blue)">
+    앞서 <b>C-13</b>에서 회사채 명목 여력 $1.3T가 오프밸런스 리스를 반영하면 <b>$700~800B, 실효 2년치</b>로 줄어든다고 봤습니다. 그리고 <b>C-11</b>에서 사모신용은 이미 환매 제한이 걸렸습니다.<br><br>
+    <b>이 플랫폼은 바로 그 갭에 대한 시장의 답입니다.</b> 자금 조달 스택이 이렇게 확장됐습니다:<br><br>
+    <b>① 내부현금 → ② 회사채 → ③ 사모신용 → ④ 벤더 주선 자산담보 금융(신규)</b><br><br>
+    아래로 갈수록 <b>비싸지고 취약해집니다.</b> 4층이 생겼다는 건 조달 여력이 늘었다는 뜻인 동시에, <b>1~3층이 한계에 닿았다는 신호</b>이기도 합니다.
+  </div>
+
+  <h4 style="margin-top:18px">이익의 질 — 순이익의 27%가 자기 고객 지분 평가익</h4>
+  <div class="tblwrap"><table>
+    <thead><tr><th>NVIDIA FY27 1Q (2026.4.26 종료)</th><th>금액</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td>매출</td><td>$81.6B (+85% YoY)</td><td>데이터센터 $75.2B → 연환산 run-rate ~$300B</td></tr>
+      <tr><td>GAAP 순이익</td><td>$58.3B</td><td>—</td></tr>
+      <tr><td style="color:#ED7D31"><b>ㄴ 지분증권 평가익</b></td><td style="color:#ED7D31"><b>$15.9B (27%)</b></td><td>현금흐름표 "(Gains) losses from equity securities, net" — OpenAI·Intel·SpaceX 등 <b>자기 고객</b> 지분 시가 재평가</td></tr>
+      <tr><td>영업현금흐름 / FCF</td><td>$50.3B / $48.6B</td><td>분기 기준</td></tr>
+      <tr><td>유동성</td><td>~$80.5B</td><td>현금 13.2 + 채권 37.1 + 시장성 주식 30.2</td></tr>
+      <tr style="background:rgba(192,0,0,.10)"><td><b>상위 3개 직접고객 비중</b></td><td><b>매출 54%</b> (21+17+16)</td><td><b>매출채권은 64%</b> (30+18+16). 전년 동기 상위 2사 30%에서 급등</td></tr>
+    </tbody>
+  </table></div>
+
+  <h4 style="margin-top:18px">루슨트의 교훈 — 무엇이 같고 무엇이 다른가</h4>
+  <div class="tblwrap"><table>
+    <thead><tr><th>통신버블 벤더 파이낸싱 (1999~2002)</th><th>규모</th><th>결말</th></tr></thead>
+    <tbody>
+      <tr><td><b>Lucent</b></td><td>약정 $8.1B = <b>매출의 24%</b></td><td>대손 $3.5B(FY01 2.2 + FY02 1.3). SEC가 FY2000 매출 <b>$1.148B 부정인식</b> 적발</td></tr>
+      <tr><td><b>Nortel</b></td><td>약정 $3.1B / 실행 $1.4B</td><td>장비가액의 <b>최대 130%까지 무담보 대출</b>. 이후 주가 -90%+, 2009년 파산</td></tr>
+      <tr><td><b>Cisco</b></td><td>고객대출 약정 $2.4B</td><td>2001년 4월 <b>재고상각 $2.25B</b>. 주가 $77 → $12, <b>전고점 회복은 2025년</b></td></tr>
+      <tr><td>업계 9개 장비사 합산</td><td>~$25.6B (McKinsey, 2000년말)</td><td>벤더 대출의 <b>33~80%가 미회수</b>. CLEC <b>47개사 파산</b>(2000~03)</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="tblwrap"><table>
+    <thead><tr><th>축</th><th>Lucent (1999~2000)</th><th>NVIDIA (2026.1Q)</th><th>판정</th></tr></thead>
+    <tbody>
+      <tr><td>영업현금흐름</td><td><b>연 $304M</b></td><td><b>분기 $50.3B</b> (165배)</td><td style="color:#00B050"><b>다르다</b></td></tr>
+      <tr><td>신용등급 방향</td><td>정크 직전으로 하락</td><td>2026.6 S&P <b>AA 상향</b>, Moody's Aa1</td><td style="color:#00B050"><b>다르다</b></td></tr>
+      <tr><td>회수 기간</td><td>다년 무담보 여신</td><td>매출채권 회수 <b>평균 53일</b></td><td style="color:#00B050"><b>다르다</b></td></tr>
+      <tr><td>수요 상황</td><td>꺾이는 수요를 여신으로 은폐</td><td>공급부족 상태에서 투자</td><td style="color:#00B050"><b>다르다</b></td></tr>
+      <tr><td>상위 고객 집중도</td><td>상위 2사 <b>23%</b></td><td>상위 3사 <b>54%</b> (매출채권 64%)</td><td style="color:#C00000"><b>더 나쁘다</b></td></tr>
+      <tr><td>이익의 질</td><td>매출 부정인식</td><td>순이익의 <b>27%가 지분 평가익</b></td><td style="color:#C00000"><b>비슷하다</b></td></tr>
+      <tr><td>역방향 순환</td><td>고객에게 대출</td><td>고객에게서 컴퓨트를 되사는 <b>클라우드 재구매 약정 $30B</b></td><td style="color:#C00000"><b>비슷하다</b></td></tr>
+      <tr><td>Wrong-way risk</td><td>수요 감소 = 대손 급증</td><td>수요 감소 = 매출 감소 <b>+ 보증 이행 동시 발생</b></td><td style="color:#C00000"><b>같다</b></td></tr>
+    </tbody>
+  </table></div>
+
+  <h4 style="margin-top:18px">양측의 말 — 논쟁의 실제 내용</h4>
+  <ul class="bullets">
+    <li><b>비판 — Michael Burry</b>: 하이퍼스케일러 커밋이 엔비디아를 순환 통과하며 실수요 없이 매출을 부풀린다고 주장, "circular spending of <b>biblical proportions</b>". 엔비디아 반박 메모에 대해서는 <b>"내 분석을 고수한다. 엔비디아가 엔론이라는 게 아니다. 명백히 시스코다"</b>라고 응수.</li>
+    <li><b>비판 — Jim Chanos</b>: "적자 기업들에 돈을 넣어 그 기업들이 자기 칩을 주문하게 만들고 있다."</li>
+    <li><b>반박 — 엔비디아(2025.11 애널리스트 메모)</b>: "루슨트와 달리 <b>벤더 파이낸싱에 의존해 매출을 키우지 않는다</b>" — 고객 대금 회수 평균 53일을 근거로 제시.</li>
+    <li><b>반박 — Jensen Huang(2026.8.17)</b>: 오하이오 보증에 대해 <b>"이게 순환금융인가? 아니다. OpenAI가 리스료를 낸다."</b> 8월 10일 플랫폼에 대해서는 목적 자체가 "독립적 장기 기관자본을 끌어들여 순환금융 우려를 해소하는 것"이라고 설명.</li>
+    <li><b>중립 — Morgan Stanley</b>: "순환성에 대한 온갖 우려에도 불구하고 엔비디아의 <b>실제 직접 신용 익스포저는 소수 네오클라우드에 대한 백스톱에 대체로 국한</b>돼 있다" — 제3자 자본이 대부분을 대므로 오히려 순환성을 <b>완화</b>한다는 평가.</li>
+  </ul>
+
+  <h4 style="margin-top:18px">규제 당국의 시각</h4>
+  <ul class="bullets">
+    <li><b>BIS 연차보고서(2026.6.28)</b> — 가장 직접적입니다. 순환 딜에 대해 <b>"이런 거래의 조건은 통상 공시가 부실하며, 동일 자산이 여러 번 담보로 잡힐 위험이 있다"</b>, 그리고 <b>"레버리지는 보이지 않는 곳에 있다고 사라지지 않는다"</b>. AI 관련 사모신용은 2010년 ~$3B에서 2025년 <b>$40B+</b>로 증가.</li>
+    <li><b>IMF GFSR(2026.4)</b> — AI 밸류체인 기업들이 "점점 순환금융에 의존"한다고 명시하되, <b>"금융안정에 미치는 영향은 현재로선 완만해 보인다"</b>고 평가.</li>
+    <li><b>Fed 금융안정보고서(2026.5.8)</b> — 순환금융을 직접 명명하지는 않았으나, IG 클라우드사 채권 발행이 1분기에만 ~$100B인데 스프레드는 역사적 저점이라는 점을 지적.</li>
+  </ul>
+
+  <div class="callout green" style="border-left-color:var(--blue)">
+    <b>🎯 균형 판단 — 진앙은 엔비디아가 아니다</b><br><br>
+    엔비디아 본체는 <b>AA 등급에 5년 CDS ~84bp</b>이고 분기 영업현금이 $50B입니다. 루슨트처럼 무너질 재무 구조가 아닙니다.<br><br>
+    하지만 <b>리스크가 사라진 게 아니라 이동했습니다.</b> 칩을 파는 쪽이 아니라 <b>빚을 내서 사는 쪽</b>에 쌓입니다 — 오라클은 <b>BBB-(투자등급 최하단)에 CDS ~215bp</b>이고, 네오클라우드와 SPV들은 등급조차 없습니다.<br><br>
+    따라서 감시해야 할 지표는 엔비디아 실적이 아니라 <b>① 오라클·네오클라우드의 스프레드 ② 이 플랫폼의 최종계약 체결 여부와 조건 ③ GPU 잔존가치</b>입니다. 셋 중 하나라도 깨지면 25% 보증이 실제 부담으로 전환됩니다.
+  </div>
+  <p class="src">출처: NVIDIA 보도자료(2026-08-10) · NVIDIA 8-K(2026-08-17) · NVIDIA 10-Q(2026-04-26) · FY27 1Q 실적발표(2026-05-20) · NVIDIA 애널리스트 메모(2025-11) · BIS Annual Economic Report(2026-06-28) · IMF GFSR(2026-04) Ch.1 · Fed Financial Stability Report(2026-05-08) · S&P/Moody's 등급 액션(2026-06) · SEC v. Lucent(2004) · Tunguz "Circular Financing" · Johannsen "Vendor Financing Loops 1999 vs 2026" · Morgan Stanley·BofA·Bernstein 코멘터리</p>
 </section>
 
 <section class="block" id="conclusion">
@@ -806,13 +895,13 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
       <tr><td><b>① 수요</b> — AI 서비스 팔림</td><td>클라우드 재가속(Azure 43%·GCP 82%·AWS 37%), 백로그 $2.3T</td><td>🟢 정상</td></tr>
       <tr><td><b>② 투자</b> — 데이터센터 짓기</td><td>2026E 빅4 $733B (2023년 $151B 대비 4.9배), 전원 가이던스 상향</td><td>🟢 가속</td></tr>
       <tr><td><b>③ 현금</b> — 벌어서 감당 가능?</td><td>2026 Q3 교차 — 이미 3사가 FCF 마이너스</td><td>🟡 전환</td></tr>
-      <tr><td><b>④ 조달</b> — 빌려서 메우기</td><td>채권 청약 5→1.6배, 컨세션 5배↑, 사모펀드 환매 제한</td><td>🟠 경고</td></tr>
+      <tr><td><b>④ 조달</b> — 빌려서 메우기</td><td>채권 청약 5→1.6배, 컨세션 5배↑, 사모펀드 환매 제한 · <b>엔비디아 주선 $500B 플랫폼이 4층으로 등장</b></td><td>🟠 경고</td></tr>
       <tr><td><b>⑤ 주가</b> — 시장의 판단</td><td>SOX 7월 -21%(2008년 후 최대), 메모리 베어마켓</td><td>🔴 선반영</td></tr>
     </tbody>
   </table></div>
   <div class="callout"><b>읽는 법</b>: ①②는 아직 파랗고 ⑤만 빨간 상태 — <b>실물이 아니라 자금조달과 주가가 먼저 반응</b>했다는 뜻입니다. ③④가 빨개지면(계약가 하락 + CapEx 첫 하향) 그때가 진짜 다운턴입니다.</div>
 
-  <h2 style="margin-top:36px"><span class="section-num">10</span>핵심 결론 7줄</h2>
+  <h2 style="margin-top:36px"><span class="section-num">10</span>핵심 결론 8줄</h2>
   <ol style="padding-left:20px; color:var(--text)">
     <li style="margin:12px 0"><b>토큰 이분화는 투자 지도</b> — 커모디티는 마진 없는 볼륨 게임, 실수익은 인프라(전력·HBM)로 귀속. 프런티어는 B2B 수익화(Anthropic이 증명 중)</li>
     <li style="margin:12px 0"><b>FCF 교차는 이미 시작됐다</b> — Alphabet·Meta Q2 실적으로 조기 확인. Oracle이 조달 소화력의 리트머스</li>
@@ -822,6 +911,7 @@ a.themetoggle{position:fixed; right:18px; bottom:18px; z-index:30; background:va
     <li style="margin:12px 0"><b>"아마존처럼 되겠지"는 절반만 맞다</b> <span class="tag-updated">신규</span> — 아마존은 공식 FCF가 마이너스였던 적이 없고(통념 오류), 주가를 되돌린 건 <b>투자 축소가 아니라 수익성 증명</b>(2015.4 AWS 마진 17% 공개 → 익일 +14%, 그 해 +118%). 이번 사이클의 대응 이벤트는 <b>AI 매출의 손익 기여 공개</b></li>
     <li style="margin:12px 0"><b>자본 사이클은 10~13% 지점, 병목은 조달</b> <span class="tag-updated">신규</span> — 총 $6.5~7.5T 중 $685~705B만 집행. 자금은 IT 62%로 흐르고(통념과 반대), FCF 교차는 이미 지났으며 <b>진짜 신호는 채권 청약배수(5→1.6배)</b></li>
     <li style="margin:12px 0"><b>반도체 사이클은 길어지되 무한하지 않다</b> <span class="tag-updated">신규</span> — driver가 AI 서버 → 엣지 AI → 피지컬 AI로 <b>3층 중첩</b>되고 공급 리드타임(팹 3~5년, HBM 3:1)이 붕괴를 늦춥니다. 다만 3~4단 금액은 2030년에도 데이터센터의 1/3 미만이라 <b>"연장"이 아니라 "완충"</b>. <b>쟁점은 2027년이 아니라 2028년</b>이며, SEMI 자체 전망도 2028년 +3% 소강 → 2029년 +11% 재가속입니다</li>
+    <li style="margin:12px 0"><b>엔비디아 "700조"는 조달 스택의 4층이다</b> <span class="tag-updated">신규</span> — 엔비디아가 조달하거나 투자하는 돈이 아니라 <b>월가 6사가 고객 구매용으로 조성하는 대출 풀(MOU)</b>입니다. 실제 나간 현금 $50B, 우발채무 $111B와 반드시 구분해야 합니다. 자금원이 <b>내부현금 → 회사채 → 사모신용 → 벤더 주선 자산담보 금융</b>으로 내려왔다는 건 여력 확대인 동시에 <b>앞 세 층이 한계에 닿았다는 신호</b>입니다. 루슨트와 달리 엔비디아 체력은 압도적이지만(분기 영업현금 $50.3B, AA), <b>고객 집중도 54%·이익의 27%가 지분 평가익·wrong-way risk</b>는 같습니다. <b>진앙은 엔비디아가 아니라 빚내서 사는 쪽</b>(오라클 BBB-·CDS 215bp)입니다</li>
     <li style="margin:12px 0"><b>토큰은 단가↓ 사용량↑↑ — 수요의 바닥은 단단하다</b> <span class="tag-updated">신규</span> — 구글 1사 월간 토큰이 2년 만에 <b>330배</b>(9.7조 → 3,200조). 에이전틱(1태스크당 재호출 12~62회)·추론모델(사고 토큰이 출력의 29~68%)·멀티모달(720p 1초 = 5,792토큰)이 건당 소비를 구조적으로 키웁니다. 수요가 <b>학습에서 추론으로</b> 넘어간다는 건 CapEx가 일회성이 아니라 <b>반복 매출에 연동</b>된다는 뜻</li>
   </ol>
 </section>
